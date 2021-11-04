@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/styles.css">
+    
+</head>
+<body>
+<br>
+<br>
+<div id="courses-list" class="container">
+    <h1 class="heading">ZARA</h1>
+    <select class="dropdown"  id='myDropdown' onchange='filterDropdown()'>
+        <option style="text-align: center;" value="all" class="small-caps">All</option>
+        <option style="text-align: center;" value="women"  class="small-caps">Women</option>
+        <option style="text-align: center;" value="men" class="small-caps">Men</option>
+        <option style="text-align: center;" value="children" class="small-caps">Children</option>
+    </select>
+    
+    <input id="searchbar" onkeyup="search()" type="search" name="search" placeholder="Search" class="search">
+    <ul class="new_pages">
+        <li><a href="file:///C:/Users/ncurkovic/Projects/project/SignUp.html" class="small-caps">Sign up</a></li>
+        <li><a href="file:///C:/Users/ncurkovic/Projects/project/Help.html" class="small-caps">Help</a></li>
+        <li class="submenu">
+            <img src="./pictures/basket.png" id="img-cart" style="width: 20px; height: 20px;">
+            <div id="shopping-cart">
+                    <table id="cart-content" class="u-full-width">
+                        <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+
+                    <a href="#" id="clear-cart" class="button u-full-width">Clear Cart</a>
+            </div>
+    </li>
+    </ul>
+</head>
+<div class="all_img">
+    <div class="row" id="women">
+        <div class="four columns">
+            <div class="card">
+                <img src="pictures/women1.jpg" class="course-image u-full-width" >
+                <div class="info-card">
+                    <h4>LONG DRESS LIMITED EDITION</h4>
+                    <p class="price"><span class="u-pull-right ">699,90 KN</span></p>
+                    <a href="#" class="u-full-width button-primary button input add-to-cart" data-id="1">Add to Cart</a>
+                </div>
+            </div> 
+        </div>
+        <div class="four columns">
+                <div class="card">
+                    <img src="pictures/women2.jpg" class="course-image u-full-width">
+                    <div class="info-card">
+                        <h4>PLEATED DRESS LIMITED EDITION</h4>
+                        <p class="price"><span class="u-pull-right ">699,90 KN</span></p>
+                        <a href="#" class="u-full-width button-primary button input add-to-cart" data-id="2">Add to Cart</a>
+                    </div>
+                </div>
+        </div>
+        <div class="four columns">
+                <div class="card">
+                    <img src="pictures/women3.jpg" class="course-image u-full-width">
+                    <div class="info-card">
+                        <h4>RESS LIKE A LIMITED EDITION ROBE</h4>
+                        <p class="price"><span class="u-pull-right ">699,90 KN</span></p>
+                        <a href="#" class="u-full-width button-primary button input add-to-cart" data-id="3">Add to Cart</a>
+                    </div>
+                </div> 
+        </div></div>
+
+    
+    </div> 
+    <div class="row" id="men">
+        <div class="four columns">
+            <div class="card">
+                <img src="pictures/men2.jpg" class="course-image u-full-width">
+                <div class="info-card">
+                    <h4>TEXTURED EASY CARE SHIRT</h4>
+                    <p class="price"><span class="u-pull-right ">149,90 KN</span></p>
+                    <a href="#" class="u-full-width button-primary button input add-to-cart" data-id="4">Add to Cart</a>
+                </div>
+            </div> 
+        </div>
+        <div class="four columns">
+                <div class="card">
+                    <img src="pictures/men3.jpg" class="course-image u-full-width">
+                    <div class="info-card">
+                        <h4>HERRINGBONE PATTERNED SHIRT </h4>
+                        <p class="price"><span class="u-pull-right ">149,90 KN</span></p>
+                        <a href="#" class="u-full-width button-primary button input add-to-cart" data-id="5">Add to Cart</a>
+                    </div>
+                </div> 
+        </div>
+        <div class="four columns">
+                <div class="card">
+                    <img src="pictures/men1.jpg" class="course-image u-full-width">
+                    <div class="info-card">
+                        <h4>OVERSIZED COAT FOR MEN</h4>
+                        <p class="price"><span class="u-pull-right ">1599,90 KN</span></p>
+                        <a href="#" class="u-full-width button-primary button input add-to-cart" data-id="6">Add to Cart</a>
+                    </div>
+                </div> 
+        </div></div>
+        
+    </div> 
+    <div class="row" id="children">
+            <div class="four columns">
+                <div class="card">
+                    <img src="pictures/children2.jpg" class="course-image u-full-width">
+                    <div class="info-card">
+                        <h4>SPARKLY MOTORCYCLE JACKET</h4>
+                        <p class="price"><span class="u-pull-right ">499,90 KN</span></p>
+                        <a href="#" class="u-full-width button-primary button input add-to-cart" data-id="7">Add to Cart</a>
+                    </div>
+                </div> 
+            </div>
+            <div class="four columns">
+                    <div class="card">
+                        <img src="pictures/children1.jpg" class="course-image u-full-width">
+                        <div class="info-card">
+                            <h4>STAR-CAUSE DRESS - CHILDREN </h4>
+                            <p class="price"><span class="u-pull-right ">149,90 KN</span></p>
+                            <a href="#" class="u-full-width button-primary button input add-to-cart" data-id="8">Add to Cart</a>
+                        </div>
+                    </div> 
+            </div>
+    </div>
+<br>
+<br>
+    <footer id="footer" class="footer">
+        <br>
+    <br>
+    <form onsubmit="return validate_form(this);" method="post">
+        <label ><b>Sing up for our newsletter:</b></label><br><br>
+        <input type="text" name="email" placeholder="Enter your address here"  style="width: 300px;text-align: center;" size="35"/>
+        <input type="submit" value="Submit"/>
+      </form>
+    <br>
+    <form class="soc_mreze">
+        <div>
+            <a href="https://www.facebook.com/Zara">
+            <img src="pictures/facebook.png" width="50px" height="40px"></a>
+        </div>
+        <div>
+            <a href="https://www.instagram.com/accounts/login/">
+            <img src="pictures/instagram.png" width="45px" height="40px"></a>
+        </div>
+        <div>
+            <a href="https://consent.youtube.com/ml?continue=https://www.youtube.com/user/zara&gl=HR&hl=en&pc=yt&uxe=23983171&src=1">
+            <img src="pictures/youtube.jfif" width="65px" height="40px"></a>
+        </div>
+    </form>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/myScript.js"></script>
+
+</body>
+</html>
